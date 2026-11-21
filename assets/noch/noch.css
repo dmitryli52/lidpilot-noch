@@ -732,3 +732,54 @@ h1{font-weight:600;letter-spacing:-.018em}
 .foot{background:#05091A}
 .mmenu{background:#05091A}
 
+/* ===== Одна ночь: смена города по скроллу ===== */
+.story{position:relative;height:320vh;background:#05091A}
+.story__sticky{position:sticky;top:0;height:100svh;overflow:hidden;isolation:isolate}
+.story__bg{position:absolute;inset:0;z-index:0}
+.story__img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 50%;opacity:0;transform:scale(1.04);transition:opacity .9s ease,transform 1.4s ease}
+.story__img.is-on{opacity:1;transform:scale(1)}
+.story__shade{position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(5,9,26,.94) 0%,rgba(5,9,26,.72) 42%,rgba(5,9,26,.16) 100%),linear-gradient(180deg,rgba(5,9,26,.55),rgba(5,9,26,.05) 38%,rgba(5,9,26,.72))}
+.story__rail{position:absolute;z-index:3;top:110px;right:max(20px,4vw);display:flex;align-items:center;gap:12px;font:600 10.5px/1 var(--mono);letter-spacing:.16em;color:rgba(251,246,236,.65);text-transform:uppercase}
+.story__clock{font-size:13px;color:var(--hud);min-width:50px}
+.story__line{width:90px;height:1px;background:rgba(255,255,255,.25);position:relative;overflow:hidden}
+.story__line i{position:absolute;inset:0;background:var(--hud);transform-origin:left;transform:scaleX(0)}
+.story__stages{position:relative;z-index:2;height:100%;max-width:1360px;margin:0 auto;padding:118px max(20px,4vw) 76px;display:grid}
+.story__stage{grid-area:1/1;display:grid;grid-template-columns:minmax(0,1fr) minmax(340px,.62fr);gap:clamp(28px,4vw,70px);align-items:center;opacity:0;visibility:hidden;transform:translateY(24px);transition:opacity .55s,transform .55s,visibility .55s;pointer-events:none}
+.story__stage.is-on{opacity:1;visibility:visible;transform:none;pointer-events:auto}
+.story__copy{max-width:660px;color:var(--paper)}
+.story__copy h2{font-family:var(--display);font-weight:600;font-size:clamp(32px,4.3vw,60px);line-height:1.03;letter-spacing:-.03em;margin:16px 0 20px;max-width:16ch;color:var(--paper)}
+.story__copy p{font-size:clamp(16px,1.25vw,19px);line-height:1.55;color:rgba(251,246,236,.8);max-width:52ch}
+.story__points{list-style:none;margin:26px 0 0;padding:0;display:grid;gap:10px;font-size:15px;color:rgba(251,246,236,.86)}
+.story__points li{position:relative;padding-left:20px}
+.story__points li::before{content:"";position:absolute;left:0;top:.55em;width:7px;height:7px;border-radius:50%;background:var(--accent)}
+.story__card{background:rgba(8,12,26,.9);border:1px solid rgba(227,154,78,.3);border-radius:22px;padding:22px;backdrop-filter:blur(14px);box-shadow:0 40px 90px -30px rgba(0,0,0,.8);color:var(--paper);max-width:420px;justify-self:end;width:100%}
+.story__cardtop{display:flex;justify-content:space-between;font:600 10.5px/1 var(--mono);letter-spacing:.14em;color:rgba(251,246,236,.5);text-transform:uppercase;margin-bottom:18px}
+.story__cardtop b{color:var(--hud)}
+.story__msg{padding:13px 15px;border-radius:14px;font-size:14.5px;line-height:1.4;margin-bottom:10px;max-width:92%}
+.story__msg_q{background:rgba(255,255,255,.08);color:rgba(251,246,236,.9);border-bottom-left-radius:4px}
+.story__msg_a{background:rgba(227,154,78,.16);border:1px solid rgba(227,154,78,.28);color:var(--paper);margin-left:auto;border-bottom-right-radius:4px}
+.story__cardmeta{display:flex;justify-content:space-between;gap:10px;margin-top:16px;padding-top:14px;border-top:1px solid rgba(255,255,255,.1);font:500 10.5px/1.3 var(--mono);letter-spacing:.06em;color:rgba(251,246,236,.5);text-transform:uppercase}
+.story__nums{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:6px 0 20px}
+.story__nums b{display:block;font-family:var(--display);font-weight:600;font-size:clamp(28px,2.8vw,40px);line-height:1;color:var(--paper)}
+.story__nums span{display:block;margin-top:7px;font-size:11.5px;line-height:1.3;color:rgba(251,246,236,.55)}
+.story__cta{display:flex;gap:10px;flex-wrap:wrap;margin-top:26px}
+@media (max-width:900px){
+  .story{height:300vh}
+  .story__rail{top:92px;right:20px}
+  .story__line{width:54px}
+  .story__stages{padding:96px 20px 64px}
+  .story__stage{grid-template-columns:1fr;align-content:center;gap:22px}
+  .story__copy h2{font-size:clamp(30px,7vw,44px)}
+  .story__copy p{font-size:15.5px}
+  .story__points{display:none}
+  .story__card{max-width:100%;justify-self:start;padding:16px}
+  .story__cardtop{margin-bottom:12px}
+  .story__msg{font-size:13.5px;padding:11px 13px}
+  .story__nums b{font-size:30px}
+}
+@media (max-width:640px){
+  .story__stages{padding:86px 20px 54px}
+  .story__card{display:none}
+  .story__copy h2{font-size:clamp(28px,8vw,38px)}
+}
+
