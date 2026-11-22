@@ -387,14 +387,14 @@
 }
 
 .story__tl-time {
-  font: 600 13px/1 var(--sans);
+  font: 600 16px/1 var(--sans);
   letter-spacing: .02em;
   color: rgba(247, 242, 231, .78);
   transition: color .35s;
 }
 
 .story__tl-name {
-  font: 500 12px/1.2 var(--sans);
+  font: 500 14px/1.2 var(--sans);
   letter-spacing: .01em;
   color: rgba(247, 242, 231, .62);
   transition: color .35s;
@@ -445,7 +445,7 @@
 .story__cap p {
   margin: 16px 0 0;
   max-width: 47ch;
-  font: 400 clamp(16px, 1.2vw, 18.5px)/1.55 var(--sans);
+  font: 400 clamp(16.5px, 1.3vw, 19.5px)/1.55 var(--sans);
   color: rgba(247, 242, 231, .88);
   text-shadow: 0 1px 18px rgba(0, 0, 0, .4);
   transition: color .6s, text-shadow .6s;
@@ -686,9 +686,9 @@
   inset: 0;
   z-index: 0;
   pointer-events: none;
-  opacity: .025;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='56'%3E%3Cpath d='M8 31 49 12 32 49 26 34Z' fill='none' stroke='%23ffffff' stroke-width='1.3'/%3E%3C/svg%3E");
-  background-size: 56px 56px;
+  opacity: .3;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cg fill='none' stroke-width='1.7' stroke-linecap='round' stroke-linejoin='round'%3E%3Cg stroke='%23375F6D'%3E%3Cpath d='M26 8 31 20 44 21 34 29 37 42 26 35 15 42 18 29 8 21 21 20Z'/%3E%3Cpath d='M74 34a8 8 0 0 1 2-16 11 11 0 0 1 21-2 7 7 0 0 1 3 14 6 6 0 0 1-3 4Z'/%3E%3Cpath d='M64 80h34a12 12 0 0 1 12 12v4a9 9 0 0 1-16 5l-3-4H71l-3 4a9 9 0 0 1-16-5v-4a12 12 0 0 1 12-12Z'/%3E%3Cpath d='M70 86v8M66 90h8M96 88h.1M102 92h.1'/%3E%3Cpath d='M146 132v24M146 132l14-4v20'/%3E%3Ccircle cx='142' cy='158' r='3'/%3E%3Ccircle cx='156' cy='154' r='3'/%3E%3Cpath d='M150 102h20v8h-20Z'/%3E%3Cpath d='M152 110v16h16v-16M160 102v24'/%3E%3Cpath d='M154 102c-4 0-6-2-6-4s2-4 4-4 4 2 4 4M166 102c4 0 6-2 6-4s-2-4-4-4-4 2-4 4'/%3E%3Ccircle cx='52' cy='58' r='12'/%3E%3Cpath d='M47 55h.1M57 55h.1M47 62c2 3 8 3 10 0'/%3E%3Cpath d='M92 168c4-6 8 6 12 0s8 6 12 0'/%3E%3C/g%3E%3Cg stroke='%2354436A'%3E%3Cpath d='M30 156c-10-7-15-12-15-18a7 7 0 0 1 12-4 7 7 0 0 1 12 4c0 6-5 11-15 18Z'/%3E%3Cpath d='M96 132a15 15 0 1 0 0 26 13 13 0 0 1 0-26Z'/%3E%3Cpath d='M138 12 168 24 148 32 144 44 139 32 126 30Z'/%3E%3Cpath d='M120 48l10 12-10 14-10-14Z'/%3E%3Cpath d='M110 60h20'/%3E%3C/g%3E%3Cg stroke='%237A5636'%3E%3Cpath d='M16 74h22v12a7 7 0 0 1-7 7H23a7 7 0 0 1-7-7Z'/%3E%3Cpath d='M38 77h4a5 5 0 0 1 0 10h-4M21 68c0-3 4-3 4-6M29 68c0-3 4-3 4-6'/%3E%3Cpath d='M148 62 132 88h12l-4 22 18-28h-12Z'/%3E%3Cpath d='M60 100v20M50 110h20'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  background-size: 135px 135px;
 }
 
 .story__frame[data-step="0"] .story__chat,
@@ -983,7 +983,7 @@
 }
 
 .story__count b {
-  font: 600 15px/1 var(--sans);
+  font: 600 16px/1 var(--sans);
   color: rgba(247, 242, 231, .9);
 }
 
@@ -1014,7 +1014,6 @@
 
 .story__frame[data-step="3"] .story__cap p {
   color: #0B1428;
-  font-weight: 500;
   text-shadow: 0 1px 0 rgba(255, 255, 255, .6), 0 0 20px rgba(255, 255, 255, .5), 0 0 44px rgba(255, 255, 255, .3);
 }
 
@@ -1034,16 +1033,12 @@
 
 .story__frame[data-step="3"] .story__tl-time {
   color: #0B1428;
-  font-size: 13.5px;
-  font-weight: 500;
-  text-shadow: 0 1px 2px rgba(255, 255, 255, .55);
+  text-shadow: 0 1px 2px rgba(255, 255, 255, .6);
 }
 
 .story__frame[data-step="3"] .story__tl-name {
-  color: rgba(11, 20, 40, .84);
-  font-size: 12.5px;
-  font-weight: 500;
-  text-shadow: 0 1px 2px rgba(255, 255, 255, .5);
+  color: rgba(11, 20, 40, .88);
+  text-shadow: 0 1px 2px rgba(255, 255, 255, .55);
 }
 
 .story__frame[data-step="3"] .story__tl-it.is-on .story__tl-time { color: #0E1730; }
@@ -1127,9 +1122,9 @@
 
   .story__tl { margin-top: 14px; width: 100%; }
 
-  .story__tl-time { font-size: 11px; }
+  .story__tl-time { font-size: 14px; }
 
-  .story__tl-name { font-size: 10px; }
+  .story__tl-name { font-size: 13px; }
 
   .story__cap { margin-top: 16px; }
 
@@ -1157,7 +1152,7 @@
     background: linear-gradient(180deg, transparent 30%, rgba(247, 250, 255, .58) 39%, rgba(247, 250, 255, .44) 53%, transparent 64%);
   }
 
-  .story__stage { width: 100%; margin-top: 10px; perspective: 900px; }
+  .story__stage { width: 100%; margin-top: 6px; perspective: 900px; }
 
   .story__phone {
     height: auto;
@@ -1202,7 +1197,7 @@
 
   .story__chat { padding: 7px 7px 6px; gap: 4px; }
 
-  .story__chat::before { background-size: 48px 48px; }
+  .story__chat::before { background-size: 118px 118px; }
 
   .story__pday { font-size: 5.2px; padding: 2px 5px; margin-bottom: 1px; }
 
