@@ -100,9 +100,11 @@ p{margin:0}
 
 .top__in{display:flex;align-items:center;gap:clamp(16px,2.4vw,32px);max-width:1320px;margin:0 auto}
 
-.logo{display:inline-flex;align-items:center;gap:10px;font:700 22px/1 var(--sans);letter-spacing:-.02em;text-decoration:none;color:inherit;text-shadow:0 1px 18px rgba(3,8,22,.35);white-space:nowrap}
+.logo{display:inline-flex;align-items:center;gap:10px;font:500 21px/1 var(--sans);letter-spacing:-.015em;text-decoration:none;color:inherit;text-shadow:0 1px 18px rgba(3,8,22,.35);white-space:nowrap}
 
-.logo svg{width:31px;height:31px;flex:none}
+.logo__badge{display:inline-flex;align-items:center;justify-content:center;flex:none;width:46px;height:26px;padding:4px;border-radius:9px;background:#fff;box-shadow:0 0 0 1px rgba(16,26,51,.1),0 2px 12px rgba(3,8,22,.2);overflow:hidden}
+
+.logo__badge img{display:block;width:100%;height:100%;object-fit:contain}
 
 .nav{display:flex;gap:clamp(14px,1.8vw,26px);margin-left:auto}
 
